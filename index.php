@@ -3,7 +3,6 @@
 require_once __DIR__ . '/models/ClassProduction.php';
 require_once __DIR__ .'/db.php';
 
-var_dump($productions);
 
 ?>
 
@@ -24,6 +23,7 @@ var_dump($productions);
         <thead>
             <tr>
                 <th scope="col">Titolo</th>
+                <th scope="col">Genere</th>
                 <th scope="col">Lingua</th>
                 <th scope="col">Voto</th>
             </tr>
