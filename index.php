@@ -1,26 +1,7 @@
 <?php
 
-class Production
-{
-    public string $title;
-    public string $language;
-    public int $vote;
-
-    public function __construct($title, $language, $vote)
-    {
-        $this->title = $title;
-        $this->language = $language;
-        $this->vote = $vote;
-    }
-}
-
-$goodfellas = new Production('Good Fellas', 'En', '10');
-$casino = new Production('Casino', 'En', '10');
-
-$productions = [
-    $goodfellas,
-    $casino,
-];
+require_once __DIR__ . '/models/ClassProduction.php';
+require_once __DIR__ .'/db.php';
 
 var_dump($productions);
 
@@ -49,11 +30,7 @@ var_dump($productions);
         </thead>
         <tbody>
             <?php foreach ($productions as $production ):?>
-                <tr >
-                    <td><?= $production->title ?></td>
-                    <td><?= $production->language ?></td>
-                    <td><?= $production->vote ?></td>
-                </tr >
+                <?php include __DIR__ . '/partials/table.php' ?>
             <?php endforeach; ?>
         </tbody>
     </table>
