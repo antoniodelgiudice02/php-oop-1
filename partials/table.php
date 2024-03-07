@@ -14,10 +14,10 @@
     </td>
     <?php if ($production instanceof Movie) :?>
     <td>
-        <?= $production->profitti ?>
+        <?= $production->getProfitti() ?>
     </td>
     <td>
-        <?= $production->durata ?>
+        <?= $production->getDurata() ?>
     </td>
     <?php elseif ($production instanceof Serie) :?>
         <td>

@@ -12,5 +12,13 @@ class Movie extends Production
         $this->profitti = $profitti;
         $this->durata = $durata;
     }
+
+    public function getProfitti(){
+        return '$'.$this->profitti;
+    }
+
+    public function getDurata(){
+        return $this->durata . "' min";
+    }
 }
 ?>
