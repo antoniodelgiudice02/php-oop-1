@@ -18,7 +18,7 @@ require_once __DIR__ .'/db.php';
 </head>
 
 <body>
-
+<?php foreach ($array_productions as $index=>$productions ):?>
     <table class="table">
         <thead>
             <tr>
@@ -26,6 +26,12 @@ require_once __DIR__ .'/db.php';
                 <th scope="col">Genere</th>
                 <th scope="col">Lingua</th>
                 <th scope="col">Voto</th>
+                <?php if ($index == 0) : ?>
+                <th scope="col">Profitti</th>
+                <th scope="col">Durata</th>
+                <?php elseif ($index == 1) : ?>
+                <th scope="col">Stagioni</th>
+                <?php endif; ?>
             </tr>
         </thead>
         <tbody>
@@ -33,7 +39,9 @@ require_once __DIR__ .'/db.php';
                 <?php include __DIR__ . '/partials/table.php' ?>
             <?php endforeach; ?>
         </tbody>
+        
     </table>
+    <?php endforeach; ?>
 
 </body>
 

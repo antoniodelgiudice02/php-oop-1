@@ -1,6 +1,7 @@
 <?php
 
 require_once __DIR__ . '/ClassGenre.php';
+require_once __DIR__ . '/ClassMovie.php';
 class Production
 {
     public string $title;
